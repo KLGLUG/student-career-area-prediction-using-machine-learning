@@ -1,0 +1,25 @@
+age of patient,spectacle prescription,astigmatic,tear production rate,class
+1,1,1,1,no lenses
+1,1,1,2,soft lenses
+1,1,2,1,no lenses
+1,1,2,2,hard lenses
+1,2,1,1,no lenses
+1,2,1,2,soft lenses
+1,2,2,1,no lenses
+1,2,2,2,hard lenses
+2,1,1,1,no lenses
+2,1,1,2,soft lenses
+2,1,2,1,no lenses
+2,1,2,2,hard lenses
+2,2,1,1,no lenses
+2,2,1,2,soft lenses
+2,2,2,1,no lenses
+2,2,2,2,no lenses
+3,1,1,1,no lenses
+3,1,1,2,no lenses
+3,1,2,1,no lenses
+3,1,2,2,hard lenses
+3,2,1,1,no lenses
+3,2,1,2,soft lenses
+3,2,2,1,no lenses
+3,2,2,2,no lenses
