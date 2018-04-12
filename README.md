@@ -1,4 +1,2 @@
-# EMPIRICAL-MODEL-FOR-STUDENT-CAREER-PREDICTION-SYSTEM
->>This project aims at comparision of various approches to predict the career area of a student based upon his capabilities,interests,personal data and other factors.
->>We compare various algorithms specially supervised like c4.5,c5 algorithms etc. to know which gives best results in terms of accuracy and performance.
->>we then tried to modify old approaches and design new algorithm which is more precise than previous algorithms.
+# Student Career Prediction System
+As students are going through their academics and pursuing their interested courses, it is very important for them to assess their capabilities and identify their interests so that they will get to know in which career area their interests and capabilities are going to put them in. This will help them in improving their performance and motivating their interests so that they will be directed towards their targeted career and get settled in that. Also recruiters while recruiting the candidates after assessing them in all different aspects, these kind of career recommender systems help them in deciding in which job role the candidate should be kept in based on his/her performance and other evaluations. This project mainly concentrates on the career area prediction of computer science domain candidates.
