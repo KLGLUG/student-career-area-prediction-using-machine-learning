@@ -1,0 +1,177 @@
+                           INSTALLATION PROCEDURES
+The primary requirement of machine learning projects is data.To earn datasets needed for these kind of projects data is collected in three ways.
+a)Randomly generated data:Basically 25 percent of the data used in this project is generated randomly and this data does not fit well into algorithms as it does not follow any pattern.To get better accuracy with this type of data try to establish variable relationships among variables so that a hidden pattern is created.
+
+To generate this kind of data use any language and generate a script giving all the input requirements and values that are to be filled in the data and how many number of requirements that are needed.In this project there is a file named datageneration.java and this files has to be compiled.To use to this and generate a dataset an application called eclipse is need to be installed.
+
+For this first java is needed to be installed on the pc.To install java run the following commands:
+Introduction
+Java and the JVM (Java's virtual machine) are widely used and required for many kinds of software. This article will guide you through the process of installing and managing different versions of Java using apt-get.
+Prerequisites
+To follow this tutorial, you will need:
+One Ubuntu 16.04 server.
+A sudo non-root user, which you can set up by following the Ubuntu 16.04 initial server setup guide.
+Installing the Default JRE/JDK
+The easiest option for installing Java is using the version packaged with Ubuntu. Specifically, this will install OpenJDK 8, the latest and recommended version.
+First, update the package index.
+sudo apt-get update
+
+
+Next, install Java. Specifically, this command will install the Java Runtime Environment (JRE).
+sudo apt-get install default-jre
+
+
+
+There is another default Java installation called the JDK (Java Development Kit). The JDK is usually only needed if you are going to compile Java programs or if the software that will use Java specifically requires it.
+The JDK does contain the JRE, so there are no disadvantages if you install the JDK instead of the JRE, except for the larger file size.
+You can install the JDK with the following command:
+sudo apt-get install default-jdk
+
+
+
+Installing the Oracle JDK
+If you want to install the Oracle JDK, which is the official version distributed by Oracle, you will need to follow a few more steps.
+First, add Oracle's PPA, then update your package repository.
+sudo add-apt-repository ppa:webupd8team/java
+
+
+
+sudo apt-get update
+
+
+
+Then, depending on the version you want to install, execute one of the following commands:
+Oracle JDK 8
+This is the latest stable version of Java at time of writing, and the recommended version to install. You can do so using the following command:
+sudo apt-get install oracle-java8-installer
+
+
+
+Oracle JDK 9
+This is a developer preview and the general release is scheduled for March 2017. It's not recommended that you use this version because there may still be security issues and bugs. There is more information about Java 9 on the official JDK 9 website.
+To install JDK 9, use the following command:
+sudo apt-get install oracle-java9-installer
+
+
+
+Managing Java
+There can be multiple Java installations on one server. You can configure which version is the default for use in the command line by using update-alternatives, which manages which symbolic links are used for different commands.
+sudo update-alternatives --config java
+The output will look something like the following. In this case, this is what the output will look like with all Java versions mentioned above installed.
+ 
+Output
+There are 5 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                            Priority   Status
+------------------------------------------------------------
+* 0            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   1081      auto mode
+  1            /usr/lib/jvm/java-6-oracle/jre/bin/java          1         manual mode
+  2            /usr/lib/jvm/java-7-oracle/jre/bin/java          2         manual mode
+  3            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   1081      manual mode
+  4            /usr/lib/jvm/java-8-oracle/jre/bin/java          3         manual mode
+  5            /usr/lib/jvm/java-9-oracle/bin/java              4         manual mode
+
+Press <enter> to keep the current choice[*], or type selection number:
+
+
+
+ 
+You can now choose the number to use as a default. This can also be done for other Java commands, such as the compiler (javac), the documentation generator (javadoc), the JAR signing tool (jarsigner), and more. You can use the following command, filling in the command you want to customize.
+sudo update-alternatives --config command
+
+
+
+Setting the JAVA_HOME Environment Variable
+Many programs, such as Java servers, use the JAVA_HOME environment variable to determine the Java installation location. To set this environment variable, we will first need to find out where Java is installed. You can do this by executing the same command as in the previous section:
+sudo update-alternatives --config java
+
+
+
+Copy the path from your preferred installation and then open /etc/environment using nano or your favorite text editor.
+sudo nano /etc/environment
+
+
+
+At the end of this file, add the following line, making sure to replace the highlighted path with your own copied path.
+
+JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+
+
+
+Save and exit the file, and reload it.
+source /etc/environment
+
+
+
+You can now test whether the environment variable has been set by executing the following command:
+echo $JAVA_HOME
+
+
+
+This will return the path you just set.
+Conclusion
+You have now installed Java and know how to manage different versions of it. You can now install software which runs on Java, such as Tomcat, Jetty, Glassfish, Cassandra, or Jenkins.
+And after installation of java is completed.,install eclipse using the commands:
+Sudo apt-get update
+apt-get install eclipse
+Then after installation is completed open eclipse from menu and create a project ,name a class and place the code of datageneration.java into the new class created in the eclipse.run the project.A csv file is generated in the workspace folder of the eclipse.
+b)Another way of getting the data is through linked In api.One needs to get access token from linked In and then persons person ID must be known.Then using the link 
+https://api.linkedin.com/v2/people/(id:{person ID})
+One can get the profile of another person.But getting the access token is difficult and a long process.Also if we want to grab profiles of lot of users then knowing person Id of every person from url is too difficult for that many number of users.
+3)And the final method is to creating a google form or something and filling it by alumni or employees.
+
+2)Now after getting the data,to run the main code install anaconda in the pc.
+To install anaconda first one has to install conda.Commands for that are:
+
+Sudo apt-get updateapt-get install conda
+
+To set path there are 2 ways:
+Always when terminal is open execute this command 
+$ export PATH=~/anaconda3/bin:$PATH
+
+And other way is enter the command 
+$ gedit ~/.bashsrh.sh 
+and at the end type the following command and save and exit
+$ export PATH=~/anaconda3/bin:$PATH.
+4)After completion of conda installation install anaconda.
+Commands for installation:
+The way below utilizes bash scripts which is a faster way to install anaconda. This should work on Ubuntu 12.04 (precise), 14.04 (trusty), and 16.04 ( xenial).
+Open a new terminal.
+Copy and paste the paste commands from either gist for python 3 below on the terminal
+
+
+
+#go to home directory
+$ cd ~
+
+
+#You can change what anaconda version you want at
+
+
+# https://repo.continuum.io/archive/
+
+
+$ wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+
+
+$ bash Anaconda3-5.0.1-Linux-x86_64.sh -b -p ~/anaconda
+
+
+$ rm Anaconda3-5.0.1-Linux-x86_64.sh
+
+
+$ echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc
+
+
+# Refresh basically
+
+
+$ source .bashrc
+
+$ conda update conda
+
+$ conda install anaconda-navigator
+
+4)After successful installation to open the terminal and type anaconda-navigator.After the navigator is open launch jupyter notebook.
+After openning click new file->python3 option to create a new python notebook.
+Then from the file of projectcode.ipynb take the code line by line and paste in in jupyter and click run.Finally we can get the results and required output.
